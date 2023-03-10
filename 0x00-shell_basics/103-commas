@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1a | sed -e '1s/^/.\n..\n/' | grep -E '[[:alnum:]]+' | sed -e 's/$/,/' -e 's/^/"/' -e 's/\/"/\/\',/' -e '$s/,$/\n/' | tr -d '\n'
+ls -1a -R --format=commas
